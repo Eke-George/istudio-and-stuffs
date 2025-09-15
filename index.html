@@ -27,9 +27,62 @@
             align-items: center;
             justify-content: center;
         }
+        
+
+    
+/* .loader {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+  animation: rotate 2s linear infinite;
+} */
+
+.path {
+  fill: green;
+  stroke: #3498db;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 8;
+  stroke-dashoffset: 10;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+/* spin the whole circle */
+/* @keyframes rotate {
+  100% { transform: rotate(360deg); }
+} */
+
+/* grow & shrink the visible stroke */
+@keyframes dash {
+  /* 0%   { stroke-dasharray: 6, 283; stroke-dashoffset: 0; } */
+  /* 50%  { stroke-dasharray: 60, 283; stroke-dashoffset: -70; } */
+  /* 100% { stroke-dasharray: 10, 10; stroke-dashoffset: -80; } */
+}
+.linee{
+    border: 1px solid #0D6B68;
+    width: 34px;
+    height: 2px;
+
+}
+.text{
+    display: flex;
+    align-items: center;
+}
+
     </style>
 </head>
 <body>
+    <svg class="loader" viewBox="0 0 50 50">
+  <circle class="path" cx="25" cy="25" r="10"></circle>
+</svg>
+
+<div class="text">
+    <span class="linee"></span>
+    <div class="naame">
+        Alexander
+    </div>
+</div>
+
     <h1>Welcome to Rad5 Frontend Web Development Bootcamp</h1>
     <table>
         <tr>
